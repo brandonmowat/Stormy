@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Stormy
+//  Overcast
 //
 //  Created by Brandon Mowat on 2015-02-17.
 //  Copyright (c) 2015 Brandon Mowat. All rights reserved.
