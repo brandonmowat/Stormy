@@ -45,7 +45,7 @@ struct Current {
     var day6Precip: Int
     
     init(weatherDictionary: NSDictionary) {
-        let currentWeatherDictionary: NSDictionary = weatherDictionary["currently"] as NSDictionary
+        var currentWeatherDictionary: NSDictionary = weatherDictionary["currently"] as NSDictionary
         println(weatherDictionary)
         let dailyWeather = weatherDictionary["daily"] as NSDictionary
         let dailyData = dailyWeather["data"] as NSArray
@@ -121,6 +121,20 @@ struct Current {
         realTemp = currentWeatherDictionary["temperature"] as Int
         precipProbability = currentWeatherDictionary["precipProbability"] as Double
         summary = currentWeatherDictionary["summary"] as String
+        
+        // Modify summary here
+        switch summary {
+        case "Rain":
+            summary = "rainy"
+        case "Clear":
+            summary = "clear"
+        case "Snow":
+            summary = "snowy"
+        case "Fog":
+            summary = "foggy"
+        default:
+            break
+        }
         
         let currentTimeIntVal = currentWeatherDictionary["time"] as Int
         currentTime = dateStringFormatUnixTime(currentTimeIntVal)

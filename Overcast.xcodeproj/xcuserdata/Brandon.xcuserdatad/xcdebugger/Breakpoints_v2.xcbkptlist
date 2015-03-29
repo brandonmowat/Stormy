@@ -58,13 +58,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stormy/Current.swift"
-            timestampString = "447003125.7374"
+            timestampString = "449291127.547984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "init(weatherDictionary:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stormy/ViewController.swift"
+            timestampString = "449289079.28947"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4"
+            endingLineNumber = "4">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

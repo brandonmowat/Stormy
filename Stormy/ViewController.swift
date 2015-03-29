@@ -10,6 +10,8 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
+    // Long press outlet
+    @IBOutlet var longPress: UILongPressGestureRecognizer!
     
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var currentTimeLabel: UILabel!
@@ -161,7 +163,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let baseURL = NSURL(string:"https://api.forecast.io/forecast/\(apiKey)/")
         
         let forecastURL = NSURL(string: "\(userLatitude),\(userLongitude)", relativeToURL: baseURL)
+        //while (userLatitude != nil && userLongitude != nil) {
+            //let forecastURL = NSURL(string: "\(userLatitude),\(userLongitude)", relativeToURL: baseURL)
         // Do any additional setup after loading the view, typically from a nib.
+        //}
         
         println(forecastURL)
         
@@ -173,7 +178,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 let dataObject = NSData(contentsOfURL: location)
                 let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSDictionary
                 
-                let currentWeather = Current(weatherDictionary: weatherDictionary)
+                var currentWeather = Current(weatherDictionary: weatherDictionary)
+                
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     //self.temperatureLabel.text = "\(currentWeather.realTemp)"
@@ -223,6 +229,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     //self.refreshActivityIndicator.stopAnimating()
                     //self.refreshActivityIndicator.hidden = true
                     //self.self.refreshButt.hidden = false
+                    
+                    self.longPress.state
                 })
                 
             }

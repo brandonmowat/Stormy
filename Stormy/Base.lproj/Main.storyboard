@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -47,7 +47,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pi-VE-lu9">
-                                <rect key="frame" x="23" y="371" width="28.5" height="21.5"/>
+                                <rect key="frame" x="23" y="371" width="28.5" height="22"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="0.99607843139999996" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlJ-nD-Mqf">
-                                <rect key="frame" x="268" y="371" width="28.5" height="21"/>
+                                <rect key="frame" x="268.5" y="370.5" width="28.5" height="22"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="0.99607843139999996" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -123,7 +123,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPy-B4-n85">
-                                <rect key="frame" x="206" y="371" width="28.5" height="21.5"/>
+                                <rect key="frame" x="206" y="371" width="28.5" height="22"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="0.99607843139999996" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -168,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfF-Fx-jef">
-                                <rect key="frame" x="146" y="371" width="28.5" height="21.5"/>
+                                <rect key="frame" x="146" y="371" width="28.5" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21.5" id="utQ-3V-Sh5"/>
                                 </constraints>
@@ -184,6 +184,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="L99-Po-bae" firstAttribute="centerX" secondItem="mTy-0i-OZF" secondAttribute="centerX" constant="0.75" id="1Ji-BY-YnU"/>
                             <constraint firstItem="BPy-B4-n85" firstAttribute="height" secondItem="LfF-Fx-jef" secondAttribute="height" id="2yY-Fd-v2G"/>
@@ -237,6 +238,9 @@
                             <constraint firstItem="Prd-QG-345" firstAttribute="centerX" secondItem="RlJ-nD-Mqf" secondAttribute="centerX" constant="0.75" id="yOg-0s-Ijm"/>
                             <constraint firstItem="yOc-f2-hMS" firstAttribute="centerX" secondItem="Prd-QG-345" secondAttribute="centerX" constant="-1" id="yVu-n8-O8E"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="O0C-u9-Q6d" appends="YES" id="Rsh-7w-xbG"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="currentTimeLabel" destination="M0Z-Aj-UC5" id="tcg-CL-OZo"/>
@@ -261,11 +265,17 @@
                         <outlet property="day6Precip" destination="PYR-9f-Prq" id="Ase-WQ-we9"/>
                         <outlet property="day6Temp" destination="yOc-f2-hMS" id="92B-Xx-pVY"/>
                         <outlet property="iconView" destination="VX0-FJ-ai4" id="grz-w7-rfC"/>
+                        <outlet property="longPress" destination="O0C-u9-Q6d" id="hmY-YW-UXz"/>
                         <outlet property="summaryLabel" destination="ebA-Ka-9wM" id="Y0l-oy-AQy"/>
                         <outlet property="todaySummary" destination="mkc-f6-MZb" id="OWw-5v-u4K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="O0C-u9-Q6d">
+                    <connections>
+                        <outlet property="delegate" destination="kh9-bI-dsS" id="FOU-Z0-eoz"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="132" y="319"/>
         </scene>
