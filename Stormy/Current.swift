@@ -122,7 +122,7 @@ struct Current {
         precipProbability = currentWeatherDictionary["precipProbability"] as Double
         summary = currentWeatherDictionary["summary"] as String
         
-        // Modify summary here
+        // Modify/Optimize summary here
         switch summary {
         case "Rain":
             summary = "rainy"
@@ -132,6 +132,8 @@ struct Current {
             summary = "snowy"
         case "Fog":
             summary = "foggy"
+        case "Drizzle":
+            summary = "drizzly"
         default:
             break
         }
